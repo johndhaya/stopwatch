@@ -35,7 +35,7 @@ class Stopwatch extends Component {
   }
 
   renderSeconds = () => {
-    const timeElapsedInSeconds = this.state
+    const {timeElapsedInSeconds} = this.state
     const seconds = Math.floor(timeElapsedInSeconds % 60)
 
     if (seconds < 10) {
@@ -45,7 +45,7 @@ class Stopwatch extends Component {
   }
 
   renderMinutes = () => {
-    const timeElapsedInSeconds = this.state
+    const {timeElapsedInSeconds} = this.state
     const minutes = Math.floor(timeElapsedInSeconds / 60)
 
     if (minutes < 10) {
