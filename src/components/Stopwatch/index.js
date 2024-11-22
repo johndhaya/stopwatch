@@ -1,4 +1,3 @@
-// Write your code here
 import {Component} from 'react'
 
 import './index.css'
@@ -59,24 +58,23 @@ class Stopwatch extends Component {
     const time = `${this.renderMinutes()}:${this.renderSeconds()}`
 
     return (
-      <div className="app-cont">
-        <div className="stopwatch-cont">
-          <h1 className="head">Stopwatch</h1>
-
-          <div className="timer-cont">
+      <div className="app-container">
+        <div className="stopwatch-container">
+          <h1 className="stopwatch">Stopwatch</h1>
+          <div className="timer-container">
             <div className="timer">
               <img
-                className="timer-img"
-                alt="stopwatch"
+                className="timer-image"
                 src="https://assets.ccbp.in/frontend/react-js/stopwatch-timer.png"
+                alt="stopwatch"
               />
-              <p className="text">Timer</p>
+              <p className="timer-text">Timer</p>
             </div>
-            <h1 className="stopwatch-time">{time}</h1>
-            <div className="timer-btns">
+            <h1 className="stopwatch-timer">{time}</h1>
+            <div className="timer-buttons">
               <button
                 type="button"
-                className="start-btn button"
+                className="start-button button"
                 onClick={this.onStartTimer}
                 disabled={isTimerRunning}
               >
@@ -84,14 +82,14 @@ class Stopwatch extends Component {
               </button>
               <button
                 type="button"
-                className="stop-btn button"
+                className="stop-button button"
                 onClick={this.onStopTimer}
               >
                 Stop
               </button>
               <button
                 type="button"
-                className="reset-btn button"
+                className="reset-button button"
                 onClick={this.onResetTimer}
               >
                 Reset
@@ -103,4 +101,5 @@ class Stopwatch extends Component {
     )
   }
 }
+
 export default Stopwatch
